@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh '''echo umesh'''
+                sh '''echo Building using dockerfile
+                    ./build.sh
+                    '''
             }
         }
         stage('Test') {
