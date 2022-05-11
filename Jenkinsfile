@@ -1,16 +1,21 @@
 pipeline {
+    agent any
 
-agent any
-
-stages
-{
-  stage('building')
-  {
-  step {
-    sh '''echo umesh'''
-  }
-  }
-}
-
-
+    stages {
+        stage('Build') {
+            steps {
+                sh '''echo umesh'''
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
 }
